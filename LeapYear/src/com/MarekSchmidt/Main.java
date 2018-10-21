@@ -20,10 +20,10 @@ package com.MarekSchmidt;
 public class Main {
 
     public static void main(String[] args) {
-        isLeapYear(-1600);
-        isLeapYear(1600);
-        isLeapYear(2017);
-        isLeapYear(2000);
+        System.out.println(isLeapYear(-1600));
+        System.out.println(isLeapYear(1600));
+        System.out.println(isLeapYear(2017));
+        System.out.println(isLeapYear(2000));
     }
 
     public static boolean isLeapYear(int year) {
@@ -32,7 +32,7 @@ public class Main {
         } else if (year % 400 == 0){
             return true;
         } else {
-            return (year % 4 == 0 && year % 100 == 0);
+            return (year % 4 == 0 && year % 100 != 0);
         }
     }
 }
